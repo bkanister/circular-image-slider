@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+.scene {
+  /* border: 1px solid #fff; */
+  position: relative;
+  width: 320px;
+  height: 220px;
+  margin: 200px auto;
+  perspective: 1000px;
+}
+
+ .carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-452px);
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+}
+
+ .carousel__cell {
+  position: absolute;
+  width: 300px;
+  height: 220px;
+  left: 10px;
+  top: 10px;
+  opacity: 0.9;
+}
+
+.slider-image {
+  width: 300px;
+  height: 200px;
+  -webkit-box-reflect: below 20px -webkit-gradient(linear, right top, right bottom, from(transparent),
+                   color-stop(0.5, transparent), to(rgba(255,255,255,.3)));
+}
+
+.nav-panel {
+  text-align: center;
+}
+
+.nav-button {
+  color:white;
+  background: black;
+  border: 1px solid white;
+  width: 80px;
+  height: 25px;
+  margin: 10px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.nav-button:focus {
+  outline-color: green;
+}
+
+
+/*var tz = Math.round((cellSize / 2) / Math.tan(Math.PI / numberOfCells));
+var tz = Math.round((210px / 2 ) / Math.tan(Math.PI / 9)) // --> 288; вычисление смещения по Z
+ */
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(452px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(452px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(452px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(452px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(452px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(452px); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(452px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(452px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(452px); }
